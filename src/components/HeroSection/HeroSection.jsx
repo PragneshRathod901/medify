@@ -1,16 +1,6 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
-import Tab from "../Tab/Tab";
-import { ReactComponent as Logo } from "../../logo.svg";
-
-const TabsTexts = [
-  "Find Doctors",
-  "Hospitals",
-  "Medicines",
-  "Surgeries",
-  "Software for Provider",
-  "Facilities",
-];
+import Header from "../Header/Header";
 
 const HeroSection = () => {
   return (
@@ -18,49 +8,71 @@ const HeroSection = () => {
       sx={{
         background: `linear-gradient(45deg, rgba(232,241,255,1) 47%, rgba(231,240,255,1) 100%)`,
         height: "832px",
+        position: "relative",
       }}
     >
+      <Header />
+      <Box
+        sx={{
+          position: "absolute",
+          top: "42px",
+          right: "100px",
+          width: "643px",
+          zIndex: "0",
+        }}
+      >
+        <img src="./images/hero_image.png" alt="heroImg" />
+      </Box>
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: "96px",
-          padding: "0px 140px",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "flex-start",
+          width: "570px",
+          height: "287px",
+          marginLeft: "135px",
+          marginTop: "44px",
         }}
       >
-        <Box
+        <Typography
+          variant="h4"
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            columnGap: "4px",
+            fontSize: "31px",
+            fontWeight: "500",
+            color: "secondary.dark",
           }}
         >
-          <Box width="23px" height={"23px"}>
-            {" "}
-            <Logo />{" "}
-          </Box>
-          <Typography variant="h6" fontWeight={700} color={"primary"}>
-            Medify
+          Skip the travel! Find Online
+        </Typography>
+        <Box>
+          <Typography variant="h2" sx={{ fontWeight: "700", fontSize: "56px" }}>
+            Medical{"  "}
+            <Box
+              component="span"
+              sx={{
+                fontSize: "56px",
+                fontWeight: "700",
+                color: "primary.main",
+              }}
+            >
+              Centers
+            </Box>
           </Typography>
         </Box>
-        <Box
+        <Typography
+          variant="h6"
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            columnGap: "40px",
+            fontWeight: "400",
+            color: "#5C6169",
           }}
         >
-          {TabsTexts.map((value, index) => (
-            <Tab key={"tab" + index} color="secondary">
-              {value}
-            </Tab>
-          ))}
-          <Button variant="contained" height="40px" disableElevation>
-            My Bookings
-          </Button>
-        </Box>
+          Connect instantly with a 24x7 specialist or choose to video visit a
+          particular doctor.
+        </Typography>
+        <Button variant="contained" sx={{ marginTop: "32px" }}>
+          Find Centers
+        </Button>
       </Box>
     </Box>
   );
