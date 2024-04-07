@@ -1,10 +1,10 @@
 :root {
   /* Global variables to be defined here */
   --color-white: #ffffff;
-  --color-green:  #9DFF5B;
-  --color-red: #F4BB4A;
-  --color-grey: #9B9B9B;
-  font-family: Ubuntu,sans-serif;
+  --color-green: #9dff5b;
+  --color-red: #f4bb4a;
+  --color-grey: #9b9b9b;
+  font-family: Poppins, sans-serif;
 }
 
 *,
@@ -18,7 +18,7 @@
 html,
 body {
   height: 100%;
-  background-color: #3B3B3B;
+  background-color: #3b3b3b;
 }
 body {
   line-height: 1.5;
@@ -52,7 +52,7 @@ h6 {
 #__next {
   isolation: isolate;
 }
-button{
+button {
   outline: none;
   border: none;
 }

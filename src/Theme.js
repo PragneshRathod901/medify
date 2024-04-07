@@ -24,7 +24,20 @@ const Theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Poppins"],
+    fontFamily: ["Poppins", "sans-serif"].join(","),
+    fontSize: 14,
+    button: {
+      textTransform: "none",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+        },
+      },
+    },
   },
 });
 export default Theme;

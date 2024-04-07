@@ -1,0 +1,9 @@
+.tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tabActive {
+  height: 6px;
+  width: 100%;
+}
