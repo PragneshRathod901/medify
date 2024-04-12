@@ -1,0 +1,10 @@
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardHeader {
+  font-size: "24px";
+  font-weight: 400;
+}

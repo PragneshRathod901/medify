@@ -3,21 +3,28 @@ import "./MainPage.css";
 import HeaderTab from "../Header/HeaderTab";
 import HeroSection from "../HeroSection/HeroSection";
 import OfferCarousal from "../OfferCarousal/OfferCarousal";
-
-const OfferImages = [
-  "offer2.png",
-  "offer.png",
-  "offer2.png",
-  "offer.png",
-  "offer2.png",
-];
+import { SwiperSlide } from "swiper/react";
+import { OfferImages } from "../../data";
+import DoctorCarousal from "../DoctorCarousal/DoctorCarousal";
 
 const MainPage = () => {
   return (
     <div>
       <HeaderTab />
       <HeroSection />
-      <OfferCarousal ImageArray={OfferImages} />
+      <OfferCarousal
+        slidesPerView={3}
+        spaceBetween={30}
+        height="455px"
+        MyClass="offer_sw"
+      >
+        {OfferImages.map((val, index) => (
+          <SwiperSlide key={"offer" + index}>
+            <img src={"./images/" + val} alt="offerImages"></img>
+          </SwiperSlide>
+        ))}
+      </OfferCarousal>
+      <DoctorCarousal />
     </div>
   );
 };
