@@ -29,6 +29,7 @@ const DoctorCard = ({ doc }) => {
             height: "100%",
             borderRadius: "250px 250px 4px 4px",
             position: "relative",
+            overflow: "hidden",
           }}
         >
           <CardMedia

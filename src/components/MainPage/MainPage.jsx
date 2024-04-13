@@ -6,6 +6,7 @@ import OfferCarousal from "../OfferCarousal/OfferCarousal";
 import { SwiperSlide } from "swiper/react";
 import { OfferImages } from "../../data";
 import DoctorCarousal from "../DoctorCarousal/DoctorCarousal";
+import FindBySpecialization from "../FindBySpecialization/FindBySpecialization";
 
 const MainPage = () => {
   return (
@@ -24,6 +25,7 @@ const MainPage = () => {
           </SwiperSlide>
         ))}
       </OfferCarousal>
+      <FindBySpecialization/>
       <DoctorCarousal />
     </div>
   );
